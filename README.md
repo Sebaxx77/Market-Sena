@@ -50,7 +50,7 @@ Para ejecutar el proyecto localmente o en un servidor, sigue estos pasos:
 2. Copia los archivos al directorio raíz de tu servidor local (por ejemplo, htdocs en XAMPP).
 
 3. Configura la base de datos:
-Importa el archivo SQL proporcionado (database.sql) a tu gestor de bases de datos (MySQL).
+Importa el archivo SQL proporcionado (MarketSenadb.sql) a tu gestor de bases de datos (MySQL).
 Ajusta las credenciales de la base de datos en el archivo de configuración (config.php).
 
 4. Instala las dependencias de Composer:
@@ -71,7 +71,7 @@ Este proyecto fue desarrollado por:
 - Maria Fernanda Velasquez Gerena
 
 ### 📜 Licencia
-Este proyecto está licenciado bajo la Licencia MIT. Puedes usarlo, modificarlo y distribuirlo libremente, sujeto a las condiciones especificadas.
+Este proyecto está licenciado bajo la Licencia MIT. Puedes usarlo, modificarlo y distribuirlo libremente, sujeto a las condiciones especificadas en el archivo [LICENSE](./LICENSE).
 
 ### 🌐 Enlaces de interés
 
