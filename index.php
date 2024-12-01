@@ -108,7 +108,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $mail->Port = 465; //puerto
 
                 // Destinatarios
-                $mail->setFrom('', '');
+                $mail->setFrom('marketsena@marketsena.shop', 'MARKET-SENA'); //Modificar correo
                 $mail->addAddress($correo); // Agregar destinatario
 
                 // Contenido del correo
