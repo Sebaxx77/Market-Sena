@@ -1,6 +1,6 @@
 <?php
 // Importar el autoloader de Composer
-require '/home/u524804893/domains/marketsena.shop/vendor/autoload.php';
+require '';//ruta al autoloader de Composer
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -26,15 +26,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             // Configura el servidor SMTP
             $mail->isSMTP();
-            $mail->Host = 'smtp.hostinger.com'; // Usar el servidor SMTP de Hostinguer
+            $mail->Host = ''; // Usar el servidor SMTP de Composer
             $mail->SMTPAuth = true;
-            $mail->Username = 'marketsena@marketsena.shop'; // Tu correo
-            $mail->Password = 'Juanborrero1@'; // Contraseña
+            $mail->Username = ''; // Tu correo
+            $mail->Password = ''; // Tu Contraseña
             $mail->SMTPSecure = 'ssl';
             $mail->Port = 465;
 
             // Configurar el remitente y destinatario
-            $mail->setFrom('marketsena@marketsena.shop', 'Soporte de Market-Sena');
+            $mail->setFrom('marketsena@marketsena.shop', 'Soporte de Market-Sena'); //modificar correo
             $mail->addAddress($correo); // Enviar al correo ingresado
 
             // Generar un ID único para el caso
