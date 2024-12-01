@@ -1,0 +1,16 @@
+{
+    "name": "mi_usuario/mi_proyecto",
+    "description": "Market-Sena",
+    "version": "1.0.0",
+    "require": {
+        "phpmailer/phpmailer": "^6.5"
+    },
+    "authors": [
+        {
+            "name": "Sebastian Piamba",
+            "email": "marketsena@marketsena.shop"
+        }
+    ],
+    "minimum-stability": "stable",
+    "license": "MIT"
+}
