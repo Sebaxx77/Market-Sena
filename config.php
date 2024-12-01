@@ -1,9 +1,10 @@
 <?php
 // Configuración de la base de datos
-$servername = "localhost";
-$username = "Tu Usuario";
-$password = "";
-$dbname = "MarketSenadb";
+$host = 'localhost';
+$db   = 'MarketSenadb'; // Cambia esto al nombre de tu base de datos
+$user = 'Tu usuario';        // Cambia esto a tu usuario de la base de datos
+$pass = '';            // Cambia esto a tu contraseña de la base de datos
+$charset = 'utf8mb4';
 
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
