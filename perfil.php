@@ -4,7 +4,7 @@ require 'config.php';
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '/home/u524804893/domains/marketsena.shop/vendor/autoload.php';
+require ''; //Ruta al autoloader de composer
  // Asegúrate de cargar el autoload de Composer
 
 session_start();
@@ -143,15 +143,15 @@ if (isset($_POST['borrar_cuenta'])) {
     try {
         // Configura el servidor SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.hostinger.com'; // Usar el servidor SMTP de Hostinguer
+        $mail->Host = ''; // Usar el servidor SMTP de Composer
         $mail->SMTPAuth = true;
-        $mail->Username = 'marketsena@marketsena.shop'; // Tu correo
-        $mail->Password = 'Juanborrero1@'; // Contraseña
+        $mail->Username = ''; // Tu correo
+        $mail->Password = ''; // Contraseña
         $mail->SMTPSecure = 'ssl';
-        $mail->Port = 465;
+        $mail->Port = ;//tu puerto
 
         // Destinatarios
-        $mail->setFrom('marketsena@marketsena.shop', 'MARKET-SENA');
+        $mail->setFrom('marketsena@marketsena.shop', 'MARKET-SENA'); //Modificar correo
         $mail->addAddress($correo); // Agregar destinatario
 
         // Contenido del correo
