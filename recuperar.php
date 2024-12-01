@@ -3,15 +3,15 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require '/home/u524804893/domains/marketsena.shop/vendor/autoload.php';
+require ''; //Ruta al autoloader de composer
 
 session_start();
 
 // Conexión a la base de datos
 $servername = "localhost";
-$username = "u524804893_sena";
-$password = "Mercadosena23";
-$dbname = "u524804893_market";
+$username = "";//tu usuario
+$password = "";//tu contraseña
+$dbname = "MarketSenadb";//Nombre de tu base de datos
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -41,15 +41,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         try {
             // Configura el servidor SMTP
             $mail->isSMTP();
-            $mail->Host = 'smtp.hostinger.com'; // Usar el servidor SMTP de Hostinguer
+            $mail->Host = ''; // Usar el servidor SMTP de composer
             $mail->SMTPAuth = true;
-            $mail->Username = 'marketsena@marketsena.shop'; // Tu correo
-            $mail->Password = 'Juanborrero1@'; // Contraseña
+            $mail->Username = ''; // Tu correo
+            $mail->Password = ''; // Contraseña
             $mail->SMTPSecure = 'ssl';
             $mail->Port = 465;
 
             // Destinatarios
-            $mail->setFrom('marketsena@marketsena.shop', 'MARKET-SENA');
+            $mail->setFrom('marketsena@marketsena.shop', 'MARKET-SENA'); //modificar correo
             $mail->addAddress($correo); // Agregar destinatario
 
             // Contenido del correo
