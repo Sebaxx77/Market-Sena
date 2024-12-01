@@ -2,7 +2,7 @@
 // Configuración de la base de datos
 $host = 'localhost';
 $db   = 'MarketSenadb'; // Cambia esto al nombre de tu base de datos
-$user = 'Tu usuario';        // Cambia esto a tu usuario de la base de datos
+$user = '';        // Cambia esto a tu usuario de la base de datos
 $pass = '';            // Cambia esto a tu contraseña de la base de datos
 $charset = 'utf8mb4';
 
