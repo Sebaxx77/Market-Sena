@@ -3,9 +3,9 @@ session_start();
 
 // Conexión a la base de datos
 $servername = "localhost";
-$username = "u524804893_sena";
-$password = "Mercadosena23";
-$dbname = "u524804893_market";
+$username = "";//Tu usuario
+$password = "";//Tu contraseña
+$dbname = "MarketSenadb";//Nombre de tu base de datos
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
