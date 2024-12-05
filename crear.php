@@ -227,16 +227,34 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 </select>
             </div>
 
-            <div class="mb-3">
-                <label for="telefono" class="form-label">Teléfono de Contacto</label>
-                <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ejemplo: 3001234567" required pattern="^\d{10}$" title="Debe ingresar un número de teléfono válido de 10 dígitos">
-            </div>
+<div class="mb-3">
+    <label for="telefono" class="form-label">Teléfono de Contacto</label>
+    <input type="text" class="form-control" id="telefono" name="telefono" placeholder="Ejemplo: 3001234567" required pattern="^\d{10}$" title="Debe ingresar un número de teléfono válido de 10 dígitos">
+</div>
 
-            <div class="mb-3">
-                <label for="whatsapp_link" class="form-label">Link a tu chat de WhatsApp</label>
-                <input type="url" class="form-control" id="whatsapp_link" name="whatsapp_link" placeholder="Ejemplo: https://wa.me/+573001234567" value="https://wa.me/+57" required>
-            </div>
+<div class="mb-3">
+    <label for="whatsapp_link" class="form-label">Link a tu chat de WhatsApp</label>
+    <input type="url" class="form-control" id="whatsapp_link" name="whatsapp_link" placeholder="Ejemplo: https://wa.me/+573001234567" value="https://wa.me/+57" readonly>
+</div>
 
+<script>
+    // Obtener los elementos de los campos
+    const telefonoInput = document.getElementById('telefono');
+    const whatsappLinkInput = document.getElementById('whatsapp_link');
+
+    // Agregar un evento para cuando el usuario escriba en el campo del número
+    telefonoInput.addEventListener('input', function () {
+        // Obtener el valor del número ingresado
+        const telefono = telefonoInput.value.trim();
+        
+        // Verificar que el número tiene 10 dígitos antes de actualizar el enlace
+        if (/^\d{10}$/.test(telefono)) {
+            whatsappLinkInput.value = `https://wa.me/+57${telefono}`;
+        } else {
+            whatsappLinkInput.value = "https://wa.me/+57";
+        }
+    });
+</script>
             <button type="submit" class="btn btn-primary">Crear Publicación</button>
             <a href="paginainicial.php" class="btn btn-secondary">Volver</a>
         </form>
